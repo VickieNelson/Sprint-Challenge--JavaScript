@@ -14,6 +14,32 @@
 
 // Using your dinosaur objects, log answers to these questions:
 
+dinosaurs = [
+  {
+    name: "tyrannosaurus",
+    diet: "carnivorous",
+    weight: "7000kg",
+    length: "12m",
+    period: "Late Cretaceous",
+  },
+
+  {
+    name: "stegosaurus",
+    diet: "herbivorous",
+    weight: "2000kg",
+    length: "9m",
+    period: "Late Jurassic",
+  },
+
+  {
+    name: "velociraptor",
+    diet: "carnivorous",
+    weight: "15kg",
+    length: "1.8m",
+    period: "Late Cretaceous",
+  },
+];
+
 // How much did tyrannosaurus weigh?
 const tWeight = [];
 dinosaurs.forEach(function (element) {
@@ -267,7 +293,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 const lowCaseAnimalNames = []; //creates the empty array
 
 //run through the data to pull animal names
-let lowCaseAnimalNames = zooAnimals.map(function (animal) {
+lowCaseAnimalNames = zooAnimals.map(function (animal) {
   return animal.animal_name.toLowerCase();
 });
 console.log(lowCaseAnimalNames);
@@ -279,7 +305,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 */
 const lowPopulationAnimals = [];
 
-let lowPopulationAnimals = zooAnimals.filter(function (less) {
+lowPopulationAnimals = zooAnimals.filter(function (less) {
   return less.population < 5;
 });
 
@@ -292,7 +318,7 @@ The zoos need to know their total animal population across the United States. Fi
 */
 const populationTotal = 0;
 
-let populationTotal = zooAnimals.reduce(function (populationTotal, amount) {
+populationTotal = zooAnimals.reduce(function (populationTotal, amount) {
   return populationTotal + amount.population;
 });
 console.log(populationTotal);
